@@ -2,6 +2,12 @@ console.log('Hello World');
 let humanScore = 0;
 let computerScore = 0;
 
+function playGame() {
+    for (i = 0; i < 5; i++) {
+        playRound(getHumanChoice(), getComputerChoice());
+    }
+}
+
 function getComputerChoice() {
     const randomNum = Math.random();
     if (randomNum < 1/3) return "rock";
