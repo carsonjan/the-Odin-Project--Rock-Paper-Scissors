@@ -6,6 +6,10 @@ function playGame() {
     for (i = 0; i < 5; i++) {
         playRound(getHumanChoice(), getComputerChoice());
     }
+    if (humanScore == computerScore) console.log("The game is a tie!");
+    else if (humanScore > computerScore) console.log("You won the game!");
+    else console.log("You lost the game!");
+    console.log(`You ${humanScore} : ${computerScore} Computer`);
 }
 
 function getComputerChoice() {
